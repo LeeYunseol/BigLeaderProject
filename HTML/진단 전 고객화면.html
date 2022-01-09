@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<title>진단 전 고객화면</title>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<link
+			href="https://proxy.goorm.io/ovenapp/static/package/view.min.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script src="https://proxy.goorm.io/ovenapp/static/package/view-resource.min.js"></script>
+		<script>
+			screenWidth = 1200;
+			screenHeight = 1015;
+			projectId = "0IG1QOZo9P7Qi9T5ZgfRIEuNq8K3pE8G";
+			sequenceId = "HXEtg";
+		</script>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			#webView {
+				overflow: hidden;
+				position: relative;
+				background: #ffffff;
+				width: 1200px;
+				height: 1015px;
+				margin: 0 auto;
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+
+			#webView[data-show-memo="true"] {
+				overflow: visible;
+			}
+			#image-thumbnail {
+ 			    width:100%;
+    			height:100%;
+    			object-fit:cover;
+			}
+
+			[data-text-content] {
+				white-space: normal;
+			}
+		</style>
+	</head>
+
+	<body data-locale="ko">
+		<div
+			id="webView"
+			data-canvas="true"
+			data-show-memo="false"
+			data-show-link="false"
+			title="페이지에 링크가 연결된 객체가 있을 경우 화면을 터치/클릭하면 표시됩니다."
+		>
+			<div
+				data-obj-id="rqeMJ"
+				data-obj-type="image"
+				class=""
+				style="position: absolute; top: 140px; left: -95px; width: 676px; height: 950px;"
+				><div
+					data-image-content="true"
+					style="
+						background-image: url(https://proxy.goorm.io/ovenapp/static/imagefarm/101047781/SfD44c0jSTtOqNk27lUIq9rcS6aQ8gWN);
+					"
+				></div></div
+			><div
+				data-obj-id="eVKOY"
+				data-obj-type="element"
+				data-text-editable="true"
+				class=""
+				style="position: absolute; top: 730px; left: 1058px; width: 129px; height: 46px;"
+				><div
+					data-text-content="true"
+					style="
+						font-size: 20px;
+						color: rgb(255, 255, 255);
+						text-align: center;
+						line-height: 2.4em;
+						border-radius: 4px;
+						background-color: rgb(52, 73, 94);
+					"
+					class=""
+					onClick="location.href='/accept_request'"
+					>진단</div
+				></div
+			><div
+				data-obj-id="I8Bgr"
+				data-obj-type="element"
+				data-text-editable="true"
+				class=""
+				style="position: absolute; top: 243px; left: 461px; width: 310px; height: 52px;"
+				><div
+					data-text-content="true"
+					style="font-size: 17px; color: rgb(44, 62, 80);"
+					class=""
+				>
+					※ 하단의 업로드 아이콘을 클릭하여 <div> CT 영상을 업로드 하세요. </div></div
+				></div
+			><div
+				data-obj-id="IcvdC"
+				data-obj-type="element"
+				data-text-editable="true"
+				class=""
+				style="position: absolute; top: 309px; left: 461px; width: 316px; height: 326px;"
+
+				><div
+					class = "show_dicoms"
+					data-text-content="true"
+					style="background-color: rgba(224, 224, 224, 0.76); border-radius: 10px;
+						   background-image: url(static/img/dicom.jpeg); background-size: cover;"
+
+
+				></div>
+			<form action="/show_dicom_and_predict" id="uploadForm" method="POST" enctype="multipart/form-data">
+				<input type="file" name="file" id="file" style="display:none"/>
+				<input type="submit" id = "submit" value="예측 결과" style="display:none"/>
+			</form>
+		</div
+			><div
+				data-obj-id="ry4Kp"
+				data-obj-type="icon"
+				class=""
+				style="position: absolute; top: 640px; left: 719px; width: 57px; height: 73px;"
+				onclick="onclick=document.all.file.click()"
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					width="32"
+					height="32"
+					viewBox="0 0 32 32"
+					fill="#000000"
+					data-svg-content="true"
+				>
+					<g>
+						<path
+							d="M 30,4l-10,0 C 18.896,4, 18,4.896, 18,6c0,0-0.26,1.834-2,2L 2,8 C 0.896,8,0,8.864,0,9.968L0,28 c0,1.104, 0.896,2, 2,2l 12.006,0 l0-10 L 9.762,20 l 6.244-8l 6.244,8L 18.006,20 l0,10 L 30,30 c 1.104,0, 2-0.896, 2-2L 32,12 L 32,9.968 L 32,6 C 32,4.896, 31.104,4, 30,4z"
+						></path>
+					</g></svg></div
+			><div
+				data-obj-id="uS6xT"
+				data-obj-type="icon"
+				class=""
+				style="position: absolute; top: 642px; left: 641px; width: 62px; height: 65px;"
+				onclick="onclick=document.all.submit.click()"
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					width="32"
+					height="32"
+					viewBox="0 0 32 32"
+					fill="#000000"
+					data-svg-content="true"
+
+				>
+					<g>
+						<path
+							d="M 30,6l-7.032,0 C 21.864,6, 20.594,6.562, 20,8c0,0-0.26,1.834-2,2L 4,10 C 2.896,10, 2,10.864, 2,11.968L 2,30 c0,1.104, 0.896,2, 2,2l 26,0 c 1.104,0, 2-0.896, 2-2L 32,14 L 32,11.968 L 32,8 C 32,6.896, 31.104,6, 30,6z M 30,11.968L 30,14 l0,16 L 4,30 L 4,12 l 14,0 c 0.064,0, 0.126-0.004, 0.19-0.010c 1.876-0.178, 3.036-1.492, 3.572-2.842C 22.282,7.844, 23.188,8, 23.188,8L 30,8 L 30,11.968 zM 22,20L 18,20 L 18,16 c0-0.552-0.448-1-1-1S 16,15.448, 16,16l0,4 L 12,20 c-0.552,0-1,0.448-1,1 C 11,21.552, 11.448,22, 12,22l 4,0 l0,4 c0,0.552, 0.448,1, 1,1S 18,26.552, 18,26l0-4 l 4,0 c 0.552,0, 1-0.448, 1-1 C 23,20.448, 22.552,20, 22,20z"
+						></path>
+					</g></svg></div
+			><div
+				data-obj-type="element"
+				data-obj-id="wuwR0"
+				data-text-editable="true"
+				class=""
+				style="position: absolute; left: 792px; top: 310px; width: 395px; height: 390px;"
+				><table
+					data-text-content="true"
+					class=""
+					style="text-align: center; font-size: 15px;"
+					><tbody
+						>
+					<form action = "/predict_ML" id = "please" method = "POST" enctype="multipart/form-data">
+						<tr><th>&nbsp;추가 작성 항목</th><th>결과값</th></tr
+						><tr
+							><td>&nbsp;비중 (specific_gravity) </td><td><input type="text", name='a', placeholder="     건강검진 결과 기입"><br /></td></tr
+						><tr
+							><td><span style="font-size: 16px;">알부민 (albumin)</span></td
+							><td><input type="text", name='b', placeholder="     건강검진 결과 기입"><br /></td></tr
+						><tr
+							><td>혈액요소질소  <br>(Blood Urea)</td><td><input type="text", name='c', placeholder="     건강검진 결과 기입"><br /></td></tr
+						><tr
+							><td
+								><span style="font-size: 16px;"
+									>혈청 크레아티닌 <br> (serum_creatinine)
+								</span></td
+							><td><input type="text", name='d', placeholder="     건강검진 결과 기입"><br /></td></tr
+						><tr
+							><td
+								><span style="font-size: 16px;">헤모글로빈 <br> (haemoglobin) </span
+								><br /></td
+							><td><input type="text", name='e', placeholder="     건강검진 결과 기입"><br /></td></tr
+						><tr
+							><td
+								><span style="font-size: 16px;"
+									>압축세포용적  <br>(Packed Cell Volume)
+								</span></td
+							><td><input type="text", name='f', placeholder="     건강검진 결과 기입"><br /></td></tr
+						><tr
+							><td> 적혈구 (Red Blood Cells) </td><td><input type="text", name='g', placeholder="     건강검진 결과 기입"><input type="submit" , value='만성신질환 예측!' ><br /></td></tr></tbody></table>
+						</form>
+		</div
+			><div
+
+				data-obj-id="CCIqn"
+				data-obj-type="element"
+				data-text-editable="true"
+				class=""
+				style="position: absolute; top: 123.985px; left: 25px; width: 496px; height: 90px;"
+				><div
+					data-text-content="true"
+					style="font-weight: bold; font-size: 32px;"
+					class=""
+					spellcheck="false"
+					>1. 진단을 위한 정보 기입</div
+				></div
+			><div
+				data-obj-id="1Vr3W"
+				data-obj-type="element"
+				data-text-editable="true"
+				class=""
+				style="position: absolute; top: 243.009px; left: 792px; width: 350px; height: 71px;"
+				><div
+					data-text-content="true"
+					style="font-size: 17px; color: rgb(44, 62, 80);"
+					class=""
+				>
+					※ 빈칸에 검사 결과를 입력한 뒤, 우측
+					<div> 하단의 진단의 진단 요청 버튼을 눌러주세요.</div></div
+				></div
+			><div
+				data-obj-id="AX7J8"
+				data-obj-type="image"
+				class=""
+				style="
+					position: absolute;
+					top: 0.00869751px;
+					left: 0.00219727px;
+					width: 200px;
+					height: 100px;
+				"
+				><div
+					data-image-content="true"
+					style="
+						background-image: url(https://proxy.goorm.io/ovenapp/static/imagefarm/101047781/ML9fH4dPk2YWVUpzYHkDG5qGz0IMih2j);
+					"
+				></div></div
+			><div
+				data-obj-id="5VuNL"
+				data-obj-type="image"
+				class=""
+				style="
+					position: absolute;
+					top: -51px;
+					left: 961.998px;
+					width: 238px;
+					height: 118px;
+				"
+				><div
+					data-image-content="true"
+					style="
+						background-image: url(https://proxy.goorm.io/ovenapp/static/imagefarm/101047781/y1uHdkVD1AFFpZHUqxs9dpt6RuUGWTeX);
+					"
+				></div></div
+			><div
+				data-obj-id="l1mVT"
+				data-obj-type="image"
+				class=""
+				style="position: absolute; top: 24px; left: 762.976px; width: 200px; height: 38px;"
+				><div
+					data-image-content="true"
+					style="
+						background-image: url(https://proxy.goorm.io/ovenapp/static/imagefarm/101047781/PxpnmCVDMobP4Ud8nV9TTT82vXjmX1YK);
+					"
+				></div
+			></div
+		><div
+				data-obj-id="SBcq9"
+				data-obj-type="element"
+				data-text-editable="true"
+				class=""
+				style="position: absolute; top: 710px; left: 750px; width: 300px; height: 94px;"
+				><div
+					{%if data == 0%}
+					class = "show_dicoms1"
+					data-text-content="true"
+					style="background-color: rgba(224, 224, 224, 0.76); border-radius: 10px;
+                           background-image: url(static/img/no_chronic.png); background-size: cover;"
+
+					{%elif data==1%}
+					class = "show_dicoms2"
+					data-text-content="true"
+					style="background-color: rgba(224, 224, 224, 0.76); border-radius: 10px;
+                           background-image: url(static/img/yes_chronic.png); background-size: cover;"
+					{%endif%}
+				></div
+			></div>
+		</div>
+		<script>
+			var _tiq = "undefined" !== typeof _tiq ? _tiq : [];
+			_tiq.push(["__setPageName", "webview"]);
+			_tiq.push(["__trackPageview"]);
+			(function (d) {
+				var se = d.createElement("script");
+				se.type = "text/javascript";
+				se.async = true;
+				se.src = location.protocol + "//m1.daumcdn.net/tiara/js/td.min.js";
+				var s = d.getElementsByTagName("head")[0];
+				s.appendChild(se);
+			})(document);
+		</script>
+	</body>
+</html>
+
