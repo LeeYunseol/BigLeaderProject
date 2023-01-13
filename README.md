@@ -19,3 +19,5 @@ We tried to increase accuracy by first dividing (the kidney and kidney cancer) a
 저는 Unet을 활용하여 Image Segmentation과 백엔드 부분을 구현하였습니다.
 
 I implemented the image segmentation using Unet and backend with Flask.
+
+캐글 대회까지 참여 (16/27) https://www.kaggle.com/competitions/body-morphometry-kidney-and-tumor
